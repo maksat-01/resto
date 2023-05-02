@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+#all {
+  display: flex;
+}
+#all #header {
+  width: 5%;
+  display: flex;
+}
+#all #header .header {
+  display: flex;
+  flex-direction: column;
+  background: #1F1D2B;
+}
+#all #header .header .header--general__image {
+  width: 36px;
+  height: 36px;
+  margin-left: -10px;
+}
+#all #header .header .header--general img {
+  padding: 30px;
+  transition: 0.4s;
+  color: white;
+}
+#all #header .header .header--general img:hover {
+  transform: scale(1.9);
+}
+#all #hero {
+  width: 60%;
+  min-height: 100vh;
+  background: #2D303E;
+}
+#all #hero .hero .hero--general {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+#all #hero .hero .hero--general__icons h1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 30px 0;
+}
+#all #hero .hero .hero--general__icons p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #E0E6E9;
+}
+#all #hero .hero .hero--general__block input {
+  width: 220px;
+  height: 48px;
+  background: rgba(31, 29, 43, 0.65);
+  border-radius: 8px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ABBBC2;
+}
+#all #hero .hero label {
+  position: relative;
+  padding: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+  transition: 0.4s;
+  opacity: 0.8;
+}
+#all #hero .hero label:hover {
+  transform: scale(1.1);
+  color: #EA7C69;
+  opacity: 1;
+}
+#all #hero .hero label:before {
+  content: "";
+  left: 50%;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #EA7C69;
+  transition: all 0.45s;
+}
+#all #hero .hero label:hover:before {
+  width: 100%;
+  left: 0;
+}
+#all #hero .hero .hero--general__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#all #hero .hero .hero--general__title h1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 20px;
+}
+#all #hero .hero .hero--general__title select {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+  width: 100px;
+  height: 48px;
+  background: #1F1D2B;
+  margin: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+#all #hero .hero .hero__icons {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  width: 910px;
+  height: 420px;
+}
+#all #hero .hero .hero__icons #All:checked ~ .hero--icons__block--css,
+#all #hero .hero .hero__icons #All:checked ~ .hero--icons__block--js,
+#all #hero .hero .hero__icons #All:checked ~ .hero--icons__block--scss,
+#all #hero .hero .hero__icons #All:checked ~ .hero--icons__block--xd,
+#all #hero .hero .hero__icons #All:checked ~ .hero--icons__block--html,
+#all #hero .hero .hero__icons #All:checked ~ .hero--icons__block--fg {
+  display: block;
+}
+#all #hero .hero .hero__icons #html:checked ~ .hero--icons__block--css,
+#all #hero .hero .hero__icons #html:checked ~ .hero--icons__block--js,
+#all #hero .hero .hero__icons #html:checked ~ .hero--icons__block--scss,
+#all #hero .hero .hero__icons #html:checked ~ .hero--icons__block--xd,
+#all #hero .hero .hero__icons #html:checked ~ .hero--icons__block--fg {
+  display: none;
+}
+#all #hero .hero .hero__icons #css:checked ~ .hero--icons__block--html,
+#all #hero .hero .hero__icons #css:checked ~ .hero--icons__block--js,
+#all #hero .hero .hero__icons #css:checked ~ .hero--icons__block--scss,
+#all #hero .hero .hero__icons #css:checked ~ .hero--icons__block--xd,
+#all #hero .hero .hero__icons #css:checked ~ .hero--icons__block--fg {
+  display: none;
+}
+#all #hero .hero .hero__icons #js:checked ~ .hero--icons__block--html,
+#all #hero .hero .hero__icons #js:checked ~ .hero--icons__block--css,
+#all #hero .hero .hero__icons #js:checked ~ .hero--icons__block--scss,
+#all #hero .hero .hero__icons #js:checked ~ .hero--icons__block--xd,
+#all #hero .hero .hero__icons #js:checked ~ .hero--icons__block--fg {
+  display: none;
+}
+#all #hero .hero .hero__icons #scss:checked ~ .hero--icons__block--html,
+#all #hero .hero .hero__icons #scss:checked ~ .hero--icons__block--css,
+#all #hero .hero .hero__icons #scss:checked ~ .hero--icons__block--js,
+#all #hero .hero .hero__icons #scss:checked ~ .hero--icons__block--xd,
+#all #hero .hero .hero__icons #scss:checked ~ .hero--icons__block--fg {
+  display: none;
+}
+#all #hero .hero .hero__icons #xd:checked ~ .hero--icons__block--html,
+#all #hero .hero .hero__icons #xd:checked ~ .hero--icons__block--css,
+#all #hero .hero .hero__icons #xd:checked ~ .hero--icons__block--js,
+#all #hero .hero .hero__icons #xd:checked ~ .hero--icons__block--scss,
+#all #hero .hero .hero__icons #xd:checked ~ .hero--icons__block--fg {
+  display: none;
+}
+#all #hero .hero .hero__icons #fg:checked ~ .hero--icons__block--html,
+#all #hero .hero .hero__icons #fg:checked ~ .hero--icons__block--css,
+#all #hero .hero .hero__icons #fg:checked ~ .hero--icons__block--js,
+#all #hero .hero .hero__icons #fg:checked ~ .hero--icons__block--scss,
+#all #hero .hero .hero__icons #fg:checked ~ .hero--icons__block--xd {
+  display: none;
+}
+#all #hero .hero .hero__icons input {
+  display: none;
+}
+#all #hero .hero .hero__icons .hero--icons__block--html {
+  position: relative;
+  height: 226px;
+  width: 192px;
+  background: #1F1D2B;
+  border-radius: 16px;
+  margin: 50px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--html img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--html h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 130px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--html p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  color: #ABBBC2;
+}
+#all #hero .hero .hero__icons .hero--icons__block--css {
+  position: relative;
+  height: 226px;
+  width: 192px;
+  background: #1F1D2B;
+  border-radius: 16px;
+  margin: 50px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--css img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--css h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 130px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--css p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  color: #ABBBC2;
+}
+#all #hero .hero .hero__icons .hero--icons__block--js {
+  position: relative;
+  height: 226px;
+  width: 192px;
+  background: #1F1D2B;
+  border-radius: 16px;
+  margin: 50px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--js img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--js h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 130px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--js p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  color: #ABBBC2;
+}
+#all #hero .hero .hero__icons .hero--icons__block--scss {
+  position: relative;
+  height: 226px;
+  width: 192px;
+  background: #1F1D2B;
+  border-radius: 16px;
+  margin: 50px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--scss img {
+  position: absolute;
+  top: -50px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--scss h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 130px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--scss p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  color: #ABBBC2;
+}
+#all #hero .hero .hero__icons .hero--icons__block--xd {
+  position: relative;
+  height: 226px;
+  width: 192px;
+  background: #1F1D2B;
+  border-radius: 16px;
+  margin: 50px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--xd img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--xd h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 130px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--xd p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  color: #ABBBC2;
+}
+#all #hero .hero .hero__icons .hero--icons__block--fg {
+  position: relative;
+  height: 226px;
+  width: 192px;
+  background: #1F1D2B;
+  border-radius: 16px;
+  margin: 50px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--fg img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--fg h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 130px;
+}
+#all #hero .hero .hero__icons .hero--icons__block--fg p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  color: #ABBBC2;
+}
+#all #about {
+  width: 35%;
+  background: #1F1D2B;
+  min-height: 90vh;
+}
+#all #about .about--general h1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 10px 10px;
+}
+#all #about .about--general__block {
+  padding: 10px 10px;
+}
+#all #about .about--general__block--btn {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #EA7C69;
+  width: 66px;
+  height: 34px;
+  background: #1F1D2B;
+  border: 1px solid #393C49;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+#all #about .about--general__block--btn:hover {
+  transform: scale(1.2);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+  width: 66px;
+  height: 34px;
+  background: #EA7C69;
+  border-radius: 8px;
+}
+#all #about .about--general__block--btn2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #EA7C69;
+  width: 58px;
+  height: 34px;
+  background: #1F1D2B;
+  border: 1px solid #393C49;
+  border-radius: 8px;
+  margin: 20px;
+  transition: 0.4s;
+}
+#all #about .about--general__block--btn2:hover {
+  transform: scale(1.2);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+  width: 66px;
+  height: 34px;
+  background: #EA7C69;
+  border-radius: 8px;
+}
+#all #about .about--general__block--btn3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #EA7C69;
+  width: 74px;
+  height: 34px;
+  background: #1F1D2B;
+  border: 1px solid #393C49;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+#all #about .about--general__block--btn3:hover {
+  transform: scale(1.2);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+  width: 66px;
+  height: 34px;
+  background: #EA7C69;
+  border-radius: 8px;
+}
+#all #about .about--general__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#all #about .about--general__item h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 0 10px;
+}
+#all #about .about--general__item--title {
+  display: flex;
+  padding: 0 20px;
+}
+#all #about .about--general__item--title h3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 0 20px;
+}
+#all #about .about--general__click {
+  width: 490px;
+  height: 0;
+  border: 1px solid #393C49;
+  margin: 30px 30px 30px 10px;
+}
+#all #about .about--general__group {
+  width: 500px;
+  height: 360px;
+  overflow-y: scroll;
+}
+#all #about .about--general__group--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+#all #about .about--general__group--title--just {
+  display: flex;
+}
+#all #about .about--general__group--title--just h1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 5px 10px;
+}
+#all #about .about--general__group--title--just p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ABBBC2;
+  padding: 0 10px;
+}
+#all #about .about--general__group--title--icons__span {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  width: 48px;
+  height: 48px;
+  background: #2D303E;
+  border: 1px solid #393C49;
+  border-radius: 8px;
+}
+#all #about .about--general__group--title--icons span {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 20px;
+}
+#all #about .about--general__group--input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+#all #about .about--general__group--input input {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #E0E6E9;
+  width: 340px;
+  height: 48px;
+  outline: none;
+  background: #2D303E;
+  border: 1px solid #393C49;
+  border-radius: 8px;
+}
+#all #about .about--general__play {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+#all #about .about--general__play p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ABBBC2;
+  text-align: center;
+}
+#all #about .about--general__play span {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+}
+#all #about .about--general__btn button {
+  width: 361px;
+  height: 48px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #EA7C69;
+  background: none;
+  border: 1px solid #EA7C69;
+  border-radius: 8px;
+  transition: 0.4s;
+  margin-left: 90px;
+}
+#all #about .about--general__btn button:hover {
+  transform: scale(1.1);
+  background: #EA7C69;
+  color: #FAFAFA;
+}
+
+/*# sourceMappingURL=style.css.map */
